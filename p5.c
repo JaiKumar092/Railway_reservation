@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// Defining Structure
+
 typedef struct mynode {
 	char name[20];
 	char gen[6];
@@ -18,12 +18,12 @@ int seat(int);
 int cal(int, int, int);
 void bill(int, int);
 
-// Global variables
+
 char source[20], des[20], train[40];
 char station[40], cla[40];
 int time1, time2, a[55];
 
-// Driver Code
+
 void main()
 {
         int x = 0;
@@ -33,8 +33,7 @@ void main()
 	fflush(stdin);
 	scanf("%d", &j);
 
-	// Calling details() function with
-	// argument number of passenger
+	
 	details(j);
 	printf("Enter The Source Place: ");
 	fflush(stdin);
@@ -73,9 +72,7 @@ void main()
 			a1 = 2099;
 			a2 = 1560;
 
-			// Calling cal() function
-			// with the three argument
-			// and return value
+			
 			d = cal(a1, a2, j);
 			printf("Total Bill Amount:"
 				" %d\n",
@@ -91,8 +88,7 @@ void main()
 			a1 = 1801;
 			a2 = 981;
 
-			// Calling cal() function with
-			// three argument & return value
+			
 			d = cal(a1, a2, j);
 			printf("Total Bill Amount:"
 				"%d\n",
@@ -108,8 +104,6 @@ void main()
 			a1 = 2199;
 			a2 = 1780;
 
-			// Calling cal() function with
-			// three argument & return value
 			d = cal(a1, a2, j);
 			printf("Total Bill Amount: %d\n", d);
 		}; break;
@@ -121,8 +115,7 @@ void main()
 			a1 = 1759;
 			a2 = 1200;
 
-			// Calling cal() function with
-			// three argument & return value
+			
 			d = cal(a1, a2, j);
 			printf("Total Bill Amount: %d\n", d);
 		}; break;
@@ -134,8 +127,7 @@ void main()
 			a1 = 2205;
 			a2 = 1905;
 
-			// Calling cal() function with
-			// three argument & return value
+			
 			d = cal(a1, a2, j);
 			printf("Total Bill Amount: %d\n", d);
 		}; break;
@@ -147,17 +139,14 @@ void main()
 	} while (x);
 	printf("Now Book Your Seats......\n");
 
-	// Calling seat() function with number
-	// of passenger
+	
 	seat(j);
 
-	// Calling bill() function with
-	// the number of passenger
-	// and amount argument
+	
 	bill(d, j);
 }
 
-// Function for calculation of amount
+
 int cal(int y1, int y2, int h)
 {
 	int b, c, i, t, r, n;
@@ -205,8 +194,7 @@ int cal(int y1, int y2, int h)
 	return c;
 }
 
-// Function for taking details
-// of passengers
+
 void details(int k)
 {
 	int i, a;
@@ -222,13 +210,12 @@ void details(int k)
 		fflush(stdin);
 		scanf("%d", &a);
 
-		// Calling add_node() function
+		
 		add_node(val, gen, a);
 	}
 }
 
-// Function to add details in node
-// for each passengers
+
 void add_node(char lol[20], char der[6], int b)
 {
 	Node *newptr = NULL, *ptr;
@@ -247,7 +234,7 @@ void add_node(char lol[20], char der[6], int b)
 	}
 }
 
-// Function for choosing seats
+
 int seat(int p)
 {
 	int i;
@@ -283,7 +270,7 @@ int seat(int p)
 		scanf("%d", &a[i]);
 }
 
-// Function for printing receipt
+
 void bill(int y, int j)
 {
 	int i;
